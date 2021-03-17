@@ -21,7 +21,7 @@
     <link href="/2020/03/17/my-first-blog/"/>
     <url>/2020/03/17/my-first-blog/</url>
     
-    <content type="html"><![CDATA[<p>在这里进行写作</p>]]></content>
+    <content type="html"><![CDATA[<p>1.在manifest.json中的源码视图添加以下代码块</p><p>“plugins”: {<br>    “live-player-plugin”: {<br>        “version”: “1.2.10”, // 注意填写该直播组件最新版本号，微信开发者工具调试时可获取最新版本号（复制时请去掉注释）<br>        “provider”: “wx2b03c6e691cd7370” // 直播组件appid，（不用修改，除非微信官方更改）<br>    }<br>}</p><p>2.在需要使用直播的页面的pages.json中添加以下代码</p><p>“mp-weixin”: {<br>    “usingSwanComponents”: {<br>        “live-player-plugin”: “plugin://live-player-plugin”<br>    }<br>}</p><p>3.页面中请求后端接口（当然也可以前端请求，前提是你能拿到access_token）</p><p>相关连接：<br>（直播间信息及管理：）<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/liveplayer/studio-api.html">https://developers.weixin.qq.com/miniprogram/dev/framework/liveplayer/studio-api.html</a><br>（直播组件使用：）<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/liveplayer/live-player-plugin.html">https://developers.weixin.qq.com/miniprogram/dev/framework/liveplayer/live-player-plugin.html</a></p>]]></content>
     
     
     
